@@ -1,0 +1,17 @@
+$clr-map:(
+    orange:#cc8624,
+    rose:#cc2475,
+    bleu:#2469cc,
+    vert:#24cc24);
+
+
+@mixin color-map($clr-map){
+    @each $clr,$val in $clr-map{
+        &#{$clr}{color:$val;
+        }
+    }
+}
+
+.article__heading--{
+    @include color-map($clr-map);
+}
